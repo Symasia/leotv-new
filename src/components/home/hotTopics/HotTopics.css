@@ -1,0 +1,25 @@
+.hot-topics {
+  background: black;
+  color: white;
+  height: 100%;
+}
+
+.hot-topics p {
+  color: white;
+}
+
+.hot-topics .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hot-topics {
+    min-height: 100vh;
+    margin-top: -110px;
+    padding-top: 100px;
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+  }
+}

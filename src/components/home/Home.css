@@ -1,0 +1,60 @@
+:root {
+  --hero-primary-txt: white;
+  --hero-secondary-txt: black;
+}
+
+.hero {
+  background: url("../../assets/9i.png");
+
+  min-height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .content {
+  background: #111;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  color: var(--hero-primary-txt);
+}
+
+.hero img {
+  max-width: 100%;
+}
+
+.hero .content h1 {
+  font-family: "Anton", sans-serif;
+  color: var(--hero-primary-txt);
+  text-transform: uppercase;
+}
+
+.hero .content span {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--txt-special);
+}
+
+.hero .content p {
+  margin: 15px 0;
+  color: lightgray;
+  font-family: "Catamaran", sans-serif;
+  line-height: 20px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .hero {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  .hero img {
+    height: 500px;
+    width: auto;
+  }
+}

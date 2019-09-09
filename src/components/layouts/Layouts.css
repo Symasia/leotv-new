@@ -1,0 +1,213 @@
+:root {
+  --nav-bg: black;
+  --nav-txt: white;
+  --img-link: url("https://i.imgur.com/GVlBday.png");
+}
+header {
+  background: var(--nav-bg);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+header h1 {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.nav-login {
+  margin: 0px !important; 
+  padding: 5px 10px !important;
+}
+
+.nav-login  a{
+  color: black !important;
+}
+
+.navbar {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  background: var(--nav-bg);
+  width: 100%;
+  transform: scale(1, 0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: top;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  list-style: none;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--nav-txt);
+  font-family: "Ubuntu",sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.navbar li a:hover {
+  color: var(--txt-special);
+}
+
+.nav-brand {
+  color: var(--txt-special);
+  font-family: "Blame", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.nav-brand img {
+  margin-right: 5px;
+}
+
+.nav-toggle:checked ~ .navbar {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ .navbar a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  color: var(--nav-txt);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-active {
+  border-bottom: 2px solid #ffb347;
+}
+
+.invalid-route {
+  min-height: 100vh;
+  background: #ffb347;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.invalid-route h1 {
+  font-family: "Anton";
+  font-size: 56px;
+}
+
+.invalid-route span {
+  font-size: 32px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.invalid-route img {
+  height: 240px;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h3 {
+  margin-left: 13px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.loader {
+  border: 13px solid  transparent;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+
+.wrapper .loader-img {
+  background: var(--img-link);
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  position: absolute;
+  top: 30px;
+  left: 28px;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); 
+  }
+  100% { -webkit-transform: rotate(360deg); 
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar {
+    position: relative;
+    transform: none;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .navbar a {
+    opacity: 1;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .invalid-route img {
+    height: 360px;
+  }
+  
+}

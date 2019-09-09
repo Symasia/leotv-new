@@ -1,0 +1,50 @@
+.News .intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 30vh;
+  height: 100%;
+}
+
+.News .intro button a {
+  color: black;
+  text-decoration: none;
+}
+
+.News .intro {
+  background: url("../../assets/9i.png");
+  padding: 0 20px;
+  padding-bottom: 80px;
+}
+
+.News .intro .content {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 40px;
+  border-radius: 30px;
+}
+
+.News .intro h2,
+.News .intro p {
+  color: white;
+}
+
+.News .intro img {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .News .intro img {
+    height: 500px;
+    width: auto;
+  }
+  .News .intro .content {
+    padding-top: 100px;
+  }
+}
